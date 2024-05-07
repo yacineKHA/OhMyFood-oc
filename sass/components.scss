@@ -1,0 +1,37 @@
+@import 'variables';
+
+// Composants réutilisés sur plusieurs pages différentes
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 63px;
+    width: 100%;
+    background-color: white;
+
+    .header__logo {
+
+        width: 200px;
+    }
+}
+
+.footer {
+    height: 500px;
+    background-color: $color-darkgrey;
+    height: 186px;
+    color: white;
+    padding: 22px 25px;
+
+    .footer__logo {
+        width: 137px;
+        margin-bottom: 20px;
+    }
+    
+    .footer__listlinks{
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        list-style: none;
+        font-size: 16px;
+    }
+}
