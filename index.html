@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OhMyFood</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -14,6 +17,7 @@
     </header>
     <main>
         <div class="localisation">
+            <i class="fa-solid fa-location-dot"></i>
             <p>Paris, Belleville</p>
         </div>
         <div class="banner">
@@ -25,13 +29,18 @@
             <h2>Fonctionnement</h2>
             <div class="fonctionnement__cards-container">
                 <div class="fonctionnement__card">
+                    <div class="fonctionnement__cards-badge">1</div>
+                    <i class="fa-solid fa-lg fa-mobile-screen-button" style="color: #7e7e7e;"></i>
                     <p>Choisissez un restaurant</p>
-
                 </div>
                 <div class="fonctionnement__card">
+                    <div class="fonctionnement__cards-badge">2</div>
+                    <i class="fa-solid fa-list-ul fa-lg" style="color: #7E7E7E;"></i>
                     <p>Composez votre menu</p>
                 </div>
                 <div class="fonctionnement__card">
+                    <div class="fonctionnement__cards-badge">3</div>
+                    <i class="fa-solid fa-store fa-lg" style="color: #9356DC;"></i>
                     <p>Dégustez au restaurant</p>
                 </div>
             </div>
@@ -46,64 +55,77 @@
                     <div class="restaurants__img-container">
                         <img class="restaurants__img" src="/assets/images/menilmontant.jpg">
                     </div>
-                    <div>
-                        <h3>La palette du goût</h3>
-                        <p>Ménilmontant</p>
+                    <div class="restaurants__cards-bottom">
+                        <div>
+                            <h3>La palette du goût</h3>
+                            <p>Ménilmontant</p>
+                        </div>
+                        <div>
+                            <i class="fa-regular fa-xl fa-heart"></i>
+                            <i class="fa-solid fa-xl fa-heart"></i>
+                        </div>
                     </div>
-                    <div>
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
+
                 </div>
                 <div class="restaurants__card">
                     <div class="restaurants__img-container">
                         <img class="restaurants__img" src="/assets/images/charonne.jpg">
                     </div>
-                    <div>
-                        <h3>La palette du goût</h3>
-                        <p>Ménilmontant</p>
-                    </div>
-                    <div>
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-solid fa-heart"></i>
+                    <div class="restaurants__cards-bottom">
+                        <div>
+                            <h3>La note enchantée</h3>
+                            <p>Charonne</p>
+                        </div>
+                        <div>
+                            <i class="fa-regular fa-xl fa-heart"></i>
+                            <i class="fa-solid fa-xl fa-heart"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="restaurants__card">
                     <div class="restaurants__img-container">
                         <img class="restaurants__img" src="/assets/images/citerouge.jpg">
                     </div>
-                    <div>
-                        <h3>La palette du goût</h3>
-                        <p>Ménilmontant</p>
-                    </div>
-                    <div>
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-solid fa-heart"></i>
+                    <div class="restaurants__cards-bottom">
+                        <div>
+                            <h3>À la française</h3>
+                            <p>Cité Rouge</p>
+                        </div>
+                        <div>
+                            <i class="fa-regular fa-xl fa-heart"></i>
+                            <i class="fa-solid fa-xl fa-heart"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="restaurants__card">
                     <div class="restaurants__img-container">
                         <img class="restaurants__img" src="/assets/images/foliemericourt.jpg">
                     </div>
-                    <div>
-                        <h3>La palette du goût</h3>
-                        <p>Ménilmontant</p>
-                    </div>
-                    <div>
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-solid fa-heart"></i>
+                    <div class="restaurants__cards-bottom">
+                        <div>
+                            <h3>Le délice des sens</h3>
+                            <p>Folie-Méricourt</p>
+                        </div>
+                        <div>
+                            <i class="fa-regular fa-xl fa-heart"></i>
+                            <i class="fa-solid fa-xl fa-heart"></i>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-
-
     </main>
     <footer class="footer">
         <img class="footer__logo" src="/assets/images/logos/ohmyfood@white.svg">
         <ul class="footer__listlinks">
-            <li>Proposer un restaurant</li>
-            <li>Devenir partenaire</li>
+            <li>
+                <i class="fa-solid fa-utensils" style="color: #ffffff;"></i>
+                <span>Proposer un restaurant</span>
+            </li>
+            <li>
+                <i class="fa-solid fa-handshake-angle fa-xs"  style="color: #ffffff;"></i>
+                <span>Devenir partenaire</span>
+            </li>
             <li>Mentions légales</li>
             <li>Contact</li>
         </ul>

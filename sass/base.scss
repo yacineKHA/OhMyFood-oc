@@ -1,4 +1,6 @@
 @import 'variables';
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
 
 //Réinitialisation des styles de base
 html{
@@ -13,4 +15,5 @@ html{
 
 body {
     background-color: $color-background;
+    font-family: 'Roboto','Courier New', Courier, monospace;
 }
