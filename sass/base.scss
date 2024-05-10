@@ -3,11 +3,13 @@
 
 
 //Réinitialisation des styles de base
-html{
+html {
     box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,5 +17,5 @@ html{
 
 body {
     background-color: $color-background;
-    font-family: 'Roboto','Courier New', Courier, monospace;
+    font-family: 'Roboto', 'Courier New', Courier, monospace;
 }

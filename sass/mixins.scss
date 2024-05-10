@@ -1,8 +1,9 @@
+@import "variables";
+
 @mixin button-model() {
     text-align: center;
     border-radius: 50px;
-    width: 218px;
-    height: 50px;
+    padding: 20px;
     color: white;
     background: linear-gradient($color-secondary, $color-primary);
     box-shadow: 0px 7px 7px -2px #BBBBBB;
@@ -10,4 +11,12 @@
     font-weight: 500;
     font-size: 16px;
     cursor: pointer;
+
+    transition: background 0.5s ease-in-out;
+
+
+    &:hover {
+        background: linear-gradient($color-primary, $color-secondary);
+    }
+
 }
