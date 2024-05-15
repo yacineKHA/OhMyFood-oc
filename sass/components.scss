@@ -9,8 +9,6 @@
     width: 100%;
     background-color: white;
 
-    box-shadow: 0px 6px 3px -2px #BBBBBB;
-
     .header__logo {
 
         width: 200px;
@@ -40,4 +38,33 @@
             margin-right: 7px;
         }
     }
+}
+
+
+/********************* Responsive desktop ***********************/
+
+@media screen and (min-width: 1075px) {
+
+    /************** header *****************/
+    .header {
+        height: 96px;
+    }
+
+    /************* footer *****************/
+    .footer {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items:flex-end;
+        justify-content: flex-start;
+
+        .footer__logo {
+            margin: 0;
+        }
+
+        .footer__listlinks {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
 }

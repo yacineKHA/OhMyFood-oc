@@ -1,7 +1,7 @@
 // Importation des fichiers SCSS
 @import 'base';
-@import 'layout';
 @import 'components';
-@import 'home';
+@import './pages/home';
+@import './pages/menu.scss';
 @import 'mixins';
 @import 'variables';

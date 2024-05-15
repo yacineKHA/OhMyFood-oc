@@ -16,6 +16,23 @@ body {
   font-family: "Roboto", "Courier New", Courier, monospace;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
 .header {
   display: flex;
   justify-content: center;
@@ -23,7 +40,6 @@ body {
   height: 63px;
   width: 100%;
   background-color: white;
-  box-shadow: 0px 6px 3px -2px #BBBBBB;
 }
 .header .header__logo {
   width: 200px;
@@ -51,6 +67,27 @@ body {
   margin-right: 7px;
 }
 
+/********************* Responsive desktop ***********************/
+@media screen and (min-width: 1075px) {
+  /************** header *****************/
+  .header {
+    height: 96px;
+  }
+  /************* footer *****************/
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+  .footer .footer__logo {
+    margin: 0;
+  }
+  .footer .footer__listlinks {
+    display: flex;
+    flex-direction: row;
+  }
+}
 /****************** Localisation ***********************/
 .localisation {
   position: relative;
@@ -95,15 +132,17 @@ body {
   padding: 20px;
   color: white;
   background: linear-gradient(#FF79DA, #9356DC);
-  box-shadow: 0px 7px 7px -2px #BBBBBB;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
   border: 0px;
   font-weight: 500;
   font-size: 16px;
   cursor: pointer;
-  transition: background 0.5s ease-in-out;
+  transition: opacity 0.5s ease, box-shadow 0.5s ease;
 }
 .banner .banner__button:hover {
-  background: linear-gradient(#9356DC, #FF79DA);
+  opacity: 0.75;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
+  transition: opacity 0.5s ease, box-shadow 0.5s ease;
 }
 
 /********************* fonctionnement ********************/
@@ -118,13 +157,17 @@ body {
   height: 440px;
   padding: 25px;
 }
-.fonctionnement .fonctionnement__cards-container {
+.fonctionnement .fonctionnement__main-container {
+  width: 100%;
+}
+.fonctionnement .fonctionnement__main-container .fonctionnement__cards-container {
   display: flex;
   flex-direction: column;
   gap: 25px;
   width: 100%;
+  margin-top: 30px;
 }
-.fonctionnement .fonctionnement__cards-container .fonctionnement__card {
+.fonctionnement .fonctionnement__main-container .fonctionnement__cards-container .fonctionnement__card {
   position: relative;
   background-color: #F6F6F6;
   width: 100%;
@@ -138,7 +181,7 @@ body {
   -webkit-box-shadow: 0px 13px 13px -2px rgb(234, 234, 234);
   box-shadow: 0px 13px 13px -2px rgb(234, 234, 234);
 }
-.fonctionnement .fonctionnement__cards-container .fonctionnement__card .fonctionnement__cards-badge {
+.fonctionnement .fonctionnement__main-container .fonctionnement__cards-container .fonctionnement__card .fonctionnement__cards-badge {
   position: absolute;
   left: -10px;
   display: flex;
@@ -159,17 +202,20 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 15px;
+  padding: 25px;
   margin-bottom: 50px;
 }
-.restaurants .restaurants__cards-container {
+.restaurants .restaurants__main-container {
+  width: 100%;
+}
+.restaurants .restaurants__main-container .restaurants__cards-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
   width: 100%;
   margin-top: 20px;
 }
-.restaurants .restaurants__cards-container .restaurants__card {
+.restaurants .restaurants__main-container .restaurants__cards-container .restaurants__card {
   position: relative;
   background-color: white;
   height: 251px;
@@ -177,7 +223,7 @@ body {
   width: 100%;
   border-radius: 15px;
 }
-.restaurants .restaurants__cards-container .restaurants__card .restaurants__card-new-badge {
+.restaurants .restaurants__main-container .restaurants__cards-container .restaurants__card .restaurants__card-new-badge {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -191,22 +237,25 @@ body {
   font-weight: 500;
   font-size: 14px;
 }
-.restaurants .restaurants__cards-container .restaurants__card .restaurants__img-container {
+.restaurants .restaurants__main-container .restaurants__cards-container .restaurants__card .restaurants__img-container {
   height: 180px;
   overflow: hidden;
   width: 100%;
 }
-.restaurants .restaurants__cards-container .restaurants__card .restaurants__img-container .restaurants__img {
+.restaurants .restaurants__main-container .restaurants__cards-container .restaurants__card .restaurants__img-container .restaurants__img {
   object-fit: cover;
   object-position: center;
   width: 100%;
   height: 100%;
 }
-.restaurants .restaurants__cards-container .restaurants__card .restaurants__cards-bottom {
+.restaurants .restaurants__main-container .restaurants__cards-container .restaurants__card .restaurants__cards-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 15px;
+}
+.restaurants .restaurants__main-container .restaurants__cards-container .restaurants__card .restaurants__like-container i {
+  cursor: pointer;
 }
 .restaurants h2 {
   font-weight: 700;
@@ -220,6 +269,193 @@ body {
 .restaurants p {
   font-weight: 300;
   font-size: 17px;
+}
+
+/********************* Responsive desktop ***********************/
+@media screen and (min-width: 1075px) {
+  /********* fonctionnement ************/
+  .fonctionnement {
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 180px 0 180px;
+  }
+  .fonctionnement .fonctionnement__main-container {
+    justify-content: center;
+    align-items: center;
+    max-width: 1080px;
+  }
+  .fonctionnement .fonctionnement__main-container .fonctionnement__cards-container {
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  .fonctionnement .fonctionnement__main-container .fonctionnement__cards-container .fonctionnement__card {
+    min-width: 322px;
+  }
+  /********** Restaurants ***********/
+  .restaurants {
+    padding: 0 180px 0 180px;
+  }
+  .restaurants .restaurants__main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1080px;
+  }
+  .restaurants .restaurants__main-container .restaurants__cards-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+  }
+  .restaurants .restaurants__main-container .restaurants__cards-container .restaurants__card {
+    max-width: 490px;
+  }
+}
+.header {
+  position: relative;
+}
+.header .header__arrow {
+  position: absolute;
+  left: 30px;
+}
+
+/************* banner-menu **************/
+.banner-menu {
+  position: relative;
+}
+.banner-menu .banner-menu__img {
+  object-fit: cover;
+  width: 100%;
+}
+.banner-menu .banner__bot {
+  position: absolute;
+  bottom: 0;
+  height: 55px;
+  width: 100%;
+  background-color: #F6F6F6;
+  border-radius: 40px 40px 0px 0px;
+}
+
+/*********** menu **************/
+.menu {
+  display: flex;
+  padding: 0 10px 0 10px;
+  flex-direction: column;
+  gap: 30px;
+  background-color: transparent;
+}
+.menu .menu__title {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.menu .menu__title h2 {
+  font-size: 28px;
+}
+.menu .menu__main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.menu .menu__main-container .menu__categorie-name {
+  position: relative;
+  width: fit-content;
+  margin-bottom: 5px;
+}
+.menu .menu__main-container .menu__categorie-name::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+  bottom: -6px;
+  left: 0;
+}
+.menu .menu__main-container .menu__cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.menu .menu__main-container .menu__cards-container .menu__card {
+  position: relative;
+  display: flex;
+  background-color: white;
+  border-radius: 15px;
+  height: 69px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
+}
+.menu .menu__main-container .menu__cards-container .menu__card .menu__card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+.menu .menu__main-container .menu__cards-container .menu__card .menu__card-name {
+  font-size: 18px;
+  font-weight: 500;
+}
+.menu .menu__main-container .menu__cards-container .menu__card .menu__card-detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu .menu__main-container .menu__cards-container .menu__card .menu__card-detail p:first-child {
+  font-weight: 300;
+  font-size: 15px;
+}
+.menu .menu__main-container .menu__cards-container .menu__card .menu__card-detail p:last-child {
+  font-weight: 700;
+  font-size: 15px;
+}
+.menu .btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu .btn-container .btn__commander {
+  text-align: center;
+  border-radius: 50px;
+  padding: 20px;
+  color: white;
+  background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  border: 0px;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.5s ease, box-shadow 0.5s ease;
+  width: 186px;
+}
+.menu .btn-container .btn__commander:hover {
+  opacity: 0.75;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
+  transition: opacity 0.5s ease, box-shadow 0.5s ease;
+}
+
+.menu__card-border {
+  width: 0px;
+  height: 100%;
+  background-color: #99E2D0;
+  transition: all 0.3s ease-in-out, height 0.3s ease-in-out;
+  position: relative;
+}
+.menu__card-border i {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+}
+
+.active {
+  width: 59px;
 }
 
 /*# sourceMappingURL=styles.css.map */
