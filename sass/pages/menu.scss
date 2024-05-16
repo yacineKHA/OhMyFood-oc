@@ -13,121 +13,143 @@
 /************* banner-menu **************/
 .banner-menu {
     position: relative;
+    height: 275px;
+    overflow: hidden;
 
     .banner-menu__img {
         object-fit: cover;
         width: 100%;
+        height: 100%;
     }
 
-    .banner__bot {
+    .banner__barre-container {
+
         position: absolute;
         bottom: 0;
-        height: 55px;
         width: 100%;
-        background-color: #F6F6F6;
-        border-radius: 40px 40px 0px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .banner__barre {
+        
+            height: 55px;
+            width: 100%;
+            background-color: #F6F6F6;
+            border-radius: 40px 40px 0px 0px;
+        }
     }
+   
 }
 
 /*********** menu **************/
 
 .menu {
-    display: flex;
-    padding: 0 10px 0 10px;
-    flex-direction: column;
-    gap: 30px;
-    background-color: transparent;
 
-    .menu__title {
-        display: flex;
-        align-items: center;
-        gap: 30px;
+    background-color: white;
 
-        h2 {
-            font-size: 28px;
-        }
-    }
-
-    .menu__main-container {
+    .menu-container {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        background-color: $color-background;
+        padding: 0 10px 0 10px;
+        gap: 30px;
 
-        .menu__categorie-name {
-            position: relative;
-            width: fit-content;
-            margin-bottom: 5px;
-
-            &::after {
-                content: '';
-                position: absolute;
-                width: 40px;
-                height: 3px;
-                background-color: #99E2D0;
-                bottom: -6px;
-                left: 0;
+        .menu__title {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+    
+            h2 {
+                font-size: 28px;
             }
         }
-
-        .menu__cards-container {
+    
+        .menu__main-container {
             display: flex;
             flex-direction: column;
-            gap: 15px;
-
-            .menu__card {
+            gap: 10px;
+    
+            .menu__categorie-name {
                 position: relative;
+                width: fit-content;
+                margin-bottom: 5px;
+    
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 40px;
+                    height: 3px;
+                    background-color: #99E2D0;
+                    bottom: -6px;
+                    left: 0;
+                }
+            }
+    
+            .menu__cards-container {
                 display: flex;
-                background-color: white;
-                border-radius: 15px;
-                height: 69px;
-                width: 100%;
-                overflow: hidden;
-                box-shadow: 0px 4.01px 15.04px 0px #0000001A;
-
-                .menu__card-info {
+                flex-direction: column;
+                gap: 15px;
+    
+                .menu__card {
+                    position: relative;
                     display: flex;
-                    flex-direction: column;
-                    gap: 5px;
+                    background-color: white;
+                    border-radius: 15px;
+                    height: 69px;
                     width: 100%;
-                    height: 100%;
-                    padding: 10px;
-                }
-
-                .menu__card-name {
-                    font-size: 18px;
-                    font-weight: 500;
-                }
-
-                .menu__card-detail {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-
-                    p:first-child {
-                        font-weight: 300;
-                        font-size: 15px;
+                    overflow: hidden;
+                    box-shadow: 0px 4.01px 15.04px 0px #0000001A;
+    
+                    .menu__card-info {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+                        width: 100%;
+                        height: 100%;
+                        padding: 10px;
+                        cursor: pointer;
                     }
-
-                    p:last-child {
-                        font-weight: 700;
-                        font-size: 15px;
+    
+                    .menu__card-name {
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
+    
+                    .menu__card-detail {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+    
+                        p:first-child {
+                            font-weight: 300;
+                            font-size: 15px;
+                        }
+    
+                        p:last-child {
+                            font-weight: 700;
+                            font-size: 15px;
+                            padding-left: 10px;
+                        }
                     }
                 }
             }
         }
-    }
-
-    .btn-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-
-        .btn__commander {
-            @include button-model();
-            width: 186px;
+    
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            margin-bottom: 30px;
+    
+            .btn__commander {
+                @include button-model();
+                width: 186px;
+            }
         }
     }
+    
 
 }
 
@@ -148,4 +170,44 @@
 
 .active {
     width: 59px;
+}
+
+/********** Responsive ***********/
+
+// Desktop
+@media screen and (min-width: 1075px) {
+
+    /********* menu *********/
+    .menu {
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .menu-container {
+            width: 1055px;
+            padding: 0 200px 0 200px;
+
+            .menu__title {
+                justify-content: center;
+            }
+        }
+    }
+
+    /******** banner-menu ******/
+    .banner-menu {
+
+        .banner__barre-container{
+
+            .banner__barre {
+                width: 1055px;
+                
+            }
+        }
+    }
+
+    /********* footer **********/
+    .footer {
+        height: 114px;
+    }
 }

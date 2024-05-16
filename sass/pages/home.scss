@@ -171,6 +171,9 @@
                 }
 
                 .restaurants__like-container {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
 
                     i {
                         cursor: pointer;
@@ -199,10 +202,11 @@
     }
 }
 
-/********************* Responsive desktop ***********************/
+/********************* Responsive ***********************/
 
+// Desktop
 @media screen and (min-width: 1075px) {
-    
+
 
     /********* fonctionnement ************/
     .fonctionnement {
@@ -211,6 +215,7 @@
         justify-content: center;
         align-items: center;
         width: 100%;
+        height: 228px;
         padding: 0 180px 0 180px;
 
         .fonctionnement__main-container {
@@ -222,10 +227,6 @@
                 justify-content: space-between;
                 align-items: center;
                 flex-direction: row;
-
-                .fonctionnement__card {
-                    min-width: 322px;
-                }
             }
         }
     }
@@ -233,14 +234,14 @@
     /********** Restaurants ***********/
     .restaurants {
         padding: 0 180px 0 180px;
-        
+
         .restaurants__main-container {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             max-width: 1080px;
-        
+
             .restaurants__cards-container {
                 flex-direction: row;
                 flex-wrap: wrap;
@@ -248,8 +249,7 @@
                 gap: 50px;
 
                 .restaurants__card {
-                    max-width: 490px;
-                    
+                    width: 45%;
                 }
             }
         }

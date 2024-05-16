@@ -13,7 +13,7 @@
 
 <body>
     <header class="header">
-        <img class="header__logo" src="/assets/images/ohmyfood.png">
+        <img class="header__logo" src="/assets/images/ohmyfood.png" alt="logo">
     </header>
     <main>
         <div class="localisation">
@@ -23,7 +23,7 @@
         <div class="banner">
             <h2 class="banner__h2">Réservez le menu qui vous convient</h2>
             <p class="banner__p">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <button class="banner__button">Explorer nos restaurants</button>
+            <a href="#restaurants" class="banner__button">Explorer nos restaurants</a>
         </div>
         <section class="fonctionnement">
             <div class="fonctionnement__main-container">
@@ -50,7 +50,7 @@
 
         </section>
 
-        <section class="restaurants">
+        <section id="restaurants" class="restaurants">
             <div class="restaurants__main-container">
                 <h2>Restaurants</h2>
 
@@ -60,7 +60,7 @@
                             <span>Nouveau</span>
                         </div>
                         <div class="restaurants__img-container">
-                            <img class="restaurants__img" src="/assets/images/menilmontant.jpg">
+                            <img class="restaurants__img" src="/assets/images/menilmontant.jpg" alt="Plat Ménilmontant">
                         </div>
                         <div class="restaurants__cards-bottom">
                             <div>
@@ -69,17 +69,16 @@
                             </div>
                             <div class="restaurants__like-container">
                                 <i class="fa-regular fa-xl fa-heart"></i>
-                                <i class="fa-solid fa-xl fa-heart"></i>
                             </div>
                         </div>
 
                     </a>
-                    <div class="restaurants__card">
+                    <a class="restaurants__card" href="/restaurants/charonne.html">
                         <div class="restaurants__card-new-badge">
                             <span>Nouveau</span>
                         </div>
                         <div class="restaurants__img-container">
-                            <img class="restaurants__img" src="/assets/images/charonne.jpg">
+                            <img class="restaurants__img" src="/assets/images/charonne.jpg" alt="Plat Charonne">
                         </div>
                         <div class="restaurants__cards-bottom">
                             <div>
@@ -88,14 +87,13 @@
                             </div>
                             <div class="restaurants__like-container">
                                 <i class="fa-regular fa-xl fa-heart"></i>
-                                <i class="fa-solid fa-xl fa-heart"></i>
                             </div>
                         </div>
-                    </div>
-                    <div class="restaurants__card">
+                    </a>
+                    <a class="restaurants__card" href="/restaurants/cite_rouge.html">
 
                         <div class="restaurants__img-container">
-                            <img class="restaurants__img" src="/assets/images/citerouge.jpg">
+                            <img class="restaurants__img" src="/assets/images/citerouge.jpg" alt="Plat cité rouge">
                         </div>
                         <div class="restaurants__cards-bottom">
                             <div>
@@ -104,14 +102,15 @@
                             </div>
                             <div class="restaurants__like-container">
                                 <i class="fa-regular fa-xl fa-heart"></i>
-                                <i class="fa-solid fa-xl fa-heart"></i>
+                                <img src="/assets/images/heart.svg">
                             </div>
                         </div>
-                    </div>
+                    </a>
                     <div class="restaurants__card">
 
                         <div class="restaurants__img-container">
-                            <img class="restaurants__img" src="/assets/images/foliemericourt.jpg">
+                            <img class="restaurants__img" src="/assets/images/foliemericourt.jpg"
+                                alt="Plat folie mericourt">
                         </div>
                         <div class="restaurants__cards-bottom">
                             <div>
@@ -120,7 +119,6 @@
                             </div>
                             <div class="restaurants__like-container">
                                 <i class="fa-regular fa-xl fa-heart"></i>
-                                <i class="fa-solid fa-xl fa-heart"></i>
                             </div>
                         </div>
                     </div>
@@ -130,13 +128,13 @@
         </section>
     </main>
     <footer class="footer">
-        <img class="footer__logo" src="/assets/images/logos/ohmyfood@white.svg">
+        <img class="footer__logo" src="/assets/images/logos/ohmyfood@white.svg" alt="logo">
         <ul class="footer__listlinks">
             <li>
                 <i class="fa-solid fa-utensils" style="color: #ffffff;"></i>
                 <span>Proposer un restaurant</span>
             </li>
-            <li>
+            <li class="footer__space-li">
                 <i class="fa-solid fa-handshake-angle fa-xs" style="color: #ffffff;"></i>
                 <span>Devenir partenaire</span>
             </li>

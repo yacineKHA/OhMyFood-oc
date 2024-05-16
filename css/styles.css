@@ -18,6 +18,7 @@ body {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 a:visited {
@@ -27,10 +28,12 @@ a:visited {
 
 a:hover {
   text-decoration: none;
+  color: black;
 }
 
 a:active {
   text-decoration: none;
+  color: black;
 }
 
 .header {
@@ -82,10 +85,17 @@ a:active {
   }
   .footer .footer__logo {
     margin: 0;
+    margin-right: 60px;
   }
   .footer .footer__listlinks {
     display: flex;
     flex-direction: row;
+  }
+  .footer .footer__listlinks .footer__space-li {
+    margin-right: 30px;
+  }
+  .footer .footer__listlinks li:last-child {
+    margin-right: 90px;
   }
 }
 /****************** Localisation ***********************/
@@ -254,6 +264,11 @@ a:active {
   justify-content: space-between;
   padding: 15px;
 }
+.restaurants .restaurants__main-container .restaurants__cards-container .restaurants__card .restaurants__like-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .restaurants .restaurants__main-container .restaurants__cards-container .restaurants__card .restaurants__like-container i {
   cursor: pointer;
 }
@@ -271,7 +286,7 @@ a:active {
   font-size: 17px;
 }
 
-/********************* Responsive desktop ***********************/
+/********************* Responsive ***********************/
 @media screen and (min-width: 1075px) {
   /********* fonctionnement ************/
   .fonctionnement {
@@ -280,6 +295,7 @@ a:active {
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 228px;
     padding: 0 180px 0 180px;
   }
   .fonctionnement .fonctionnement__main-container {
@@ -291,9 +307,6 @@ a:active {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-  }
-  .fonctionnement .fonctionnement__main-container .fonctionnement__cards-container .fonctionnement__card {
-    min-width: 322px;
   }
   /********** Restaurants ***********/
   .restaurants {
@@ -313,7 +326,7 @@ a:active {
     gap: 50px;
   }
   .restaurants .restaurants__main-container .restaurants__cards-container .restaurants__card {
-    max-width: 490px;
+    width: 45%;
   }
 }
 .header {
@@ -327,14 +340,23 @@ a:active {
 /************* banner-menu **************/
 .banner-menu {
   position: relative;
+  height: 275px;
+  overflow: hidden;
 }
 .banner-menu .banner-menu__img {
   object-fit: cover;
   width: 100%;
+  height: 100%;
 }
-.banner-menu .banner__bot {
+.banner-menu .banner__barre-container {
   position: absolute;
   bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner-menu .banner__barre-container .banner__barre {
   height: 55px;
   width: 100%;
   background-color: #F6F6F6;
@@ -343,31 +365,34 @@ a:active {
 
 /*********** menu **************/
 .menu {
-  display: flex;
-  padding: 0 10px 0 10px;
-  flex-direction: column;
-  gap: 30px;
-  background-color: transparent;
+  background-color: white;
 }
-.menu .menu__title {
+.menu .menu-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #F6F6F6;
+  padding: 0 10px 0 10px;
+  gap: 30px;
+}
+.menu .menu-container .menu__title {
   display: flex;
   align-items: center;
   gap: 30px;
 }
-.menu .menu__title h2 {
+.menu .menu-container .menu__title h2 {
   font-size: 28px;
 }
-.menu .menu__main-container {
+.menu .menu-container .menu__main-container {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.menu .menu__main-container .menu__categorie-name {
+.menu .menu-container .menu__main-container .menu__categorie-name {
   position: relative;
   width: fit-content;
   margin-bottom: 5px;
 }
-.menu .menu__main-container .menu__categorie-name::after {
+.menu .menu-container .menu__main-container .menu__categorie-name::after {
   content: "";
   position: absolute;
   width: 40px;
@@ -376,12 +401,12 @@ a:active {
   bottom: -6px;
   left: 0;
 }
-.menu .menu__main-container .menu__cards-container {
+.menu .menu-container .menu__main-container .menu__cards-container {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-.menu .menu__main-container .menu__cards-container .menu__card {
+.menu .menu-container .menu__main-container .menu__cards-container .menu__card {
   position: relative;
   display: flex;
   background-color: white;
@@ -391,37 +416,41 @@ a:active {
   overflow: hidden;
   box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
 }
-.menu .menu__main-container .menu__cards-container .menu__card .menu__card-info {
+.menu .menu-container .menu__main-container .menu__cards-container .menu__card .menu__card-info {
   display: flex;
   flex-direction: column;
   gap: 5px;
   width: 100%;
   height: 100%;
   padding: 10px;
+  cursor: pointer;
 }
-.menu .menu__main-container .menu__cards-container .menu__card .menu__card-name {
+.menu .menu-container .menu__main-container .menu__cards-container .menu__card .menu__card-name {
   font-size: 18px;
   font-weight: 500;
 }
-.menu .menu__main-container .menu__cards-container .menu__card .menu__card-detail {
+.menu .menu-container .menu__main-container .menu__cards-container .menu__card .menu__card-detail {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.menu .menu__main-container .menu__cards-container .menu__card .menu__card-detail p:first-child {
+.menu .menu-container .menu__main-container .menu__cards-container .menu__card .menu__card-detail p:first-child {
   font-weight: 300;
   font-size: 15px;
 }
-.menu .menu__main-container .menu__cards-container .menu__card .menu__card-detail p:last-child {
+.menu .menu-container .menu__main-container .menu__cards-container .menu__card .menu__card-detail p:last-child {
   font-weight: 700;
   font-size: 15px;
+  padding-left: 10px;
 }
-.menu .btn-container {
+.menu .menu-container .btn-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100px;
+  margin-bottom: 30px;
 }
-.menu .btn-container .btn__commander {
+.menu .menu-container .btn-container .btn__commander {
   text-align: center;
   border-radius: 50px;
   padding: 20px;
@@ -435,7 +464,7 @@ a:active {
   transition: opacity 0.5s ease, box-shadow 0.5s ease;
   width: 186px;
 }
-.menu .btn-container .btn__commander:hover {
+.menu .menu-container .btn-container .btn__commander:hover {
   opacity: 0.75;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
   transition: opacity 0.5s ease, box-shadow 0.5s ease;
@@ -456,6 +485,32 @@ a:active {
 
 .active {
   width: 59px;
+}
+
+/********** Responsive ***********/
+@media screen and (min-width: 1075px) {
+  /********* menu *********/
+  .menu {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu .menu-container {
+    width: 1055px;
+    padding: 0 200px 0 200px;
+  }
+  .menu .menu-container .menu__title {
+    justify-content: center;
+  }
+  /******** banner-menu ******/
+  .banner-menu .banner__barre-container .banner__barre {
+    width: 1055px;
+  }
+  /********* footer **********/
+  .footer {
+    height: 114px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

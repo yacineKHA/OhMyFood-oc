@@ -59,11 +59,20 @@
 
         .footer__logo {
             margin: 0;
+            margin-right: 60px;
         }
 
         .footer__listlinks {
             display: flex;
             flex-direction: row;
+
+            .footer__space-li {
+                margin-right: 30px;
+            }
+
+            li:last-child {
+                margin-right: 90px;
+            }
         }
     }
 
