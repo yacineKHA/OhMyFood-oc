@@ -48,6 +48,40 @@ a:active {
   width: 200px;
 }
 
+/*************** bouton like ***************/
+.like-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+.like-container i {
+  font-size: 24px;
+  position: absolute;
+}
+.like-container .i1 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+.like-container .i2 {
+  opacity: 0;
+  background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.like-container:hover .i1 {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.like-container:hover .i2 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/*********************** footer ***********************/
 .footer {
   height: 500px;
   background-color: #353535;
@@ -69,6 +103,9 @@ a:active {
 .footer .footer__listlinks i {
   margin-right: 7px;
 }
+.footer .footer__listlinks a {
+  color: white;
+}
 
 /********************* Responsive desktop ***********************/
 @media screen and (min-width: 1075px) {
@@ -82,6 +119,7 @@ a:active {
     flex-direction: row-reverse;
     align-items: flex-end;
     justify-content: flex-start;
+    height: 114px;
   }
   .footer .footer__logo {
     margin: 0;
@@ -96,6 +134,59 @@ a:active {
   }
   .footer .footer__listlinks li:last-child {
     margin-right: 90px;
+  }
+}
+/********************* Loader ***********************/
+.loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  animation: hideLoader 2s linear 1;
+  animation-fill-mode: forwards;
+  position: fixed;
+  z-index: 99999;
+}
+.loader .loader__logo {
+  height: 40px;
+}
+.loader p {
+  color: white;
+  font-size: 20px;
+}
+.loader .loader__dots-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.loader .loader__dots-container .dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  animation: dots-anim infinite 0.3s alternate;
+}
+.loader .loader__dots-container .d2 {
+  animation-delay: 0.05s;
+}
+.loader .loader__dots-container .d3 {
+  animation-delay: 0.1s;
+}
+@keyframes dots-anim {
+  100% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes hideLoader {
+  100% {
+    opacity: 0;
+    visibility: hidden;
   }
 }
 /****************** Localisation ***********************/
@@ -232,6 +323,7 @@ a:active {
   overflow: hidden;
   width: 100%;
   border-radius: 15px;
+  z-index: 1;
 }
 .restaurants .restaurants__main-container .restaurants__cards-container .restaurants__card .restaurants__card-new-badge {
   display: flex;
@@ -259,18 +351,7 @@ a:active {
   height: 100%;
 }
 .restaurants .restaurants__main-container .restaurants__cards-container .restaurants__card .restaurants__cards-bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 15px;
-}
-.restaurants .restaurants__main-container .restaurants__cards-container .restaurants__card .restaurants__like-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.restaurants .restaurants__main-container .restaurants__cards-container .restaurants__card .restaurants__like-container i {
-  cursor: pointer;
 }
 .restaurants h2 {
   font-weight: 700;
@@ -284,6 +365,17 @@ a:active {
 .restaurants p {
   font-weight: 300;
   font-size: 17px;
+}
+
+.like-home {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999;
+}
+.like-home i {
+  bottom: 0;
+  right: 5px;
 }
 
 /********************* Responsive ***********************/
@@ -337,6 +429,12 @@ a:active {
   left: 30px;
 }
 
+h2 {
+  font-family: "Shrikhand", "Roboto";
+  font-weight: 400;
+  font-size: 28px;
+}
+
 /************* banner-menu **************/
 .banner-menu {
   position: relative;
@@ -377,15 +475,26 @@ a:active {
 .menu .menu-container .menu__title {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 30px;
+  position: relative;
 }
 .menu .menu-container .menu__title h2 {
   font-size: 28px;
+}
+.menu .menu-container .menu__title .like-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 25px;
+  width: 25px;
 }
 .menu .menu-container .menu__main-container {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  opacity: 1;
 }
 .menu .menu-container .menu__main-container .menu__categorie-name {
   position: relative;
@@ -434,6 +543,10 @@ a:active {
   align-items: center;
   justify-content: space-between;
 }
+.menu .menu-container .menu__main-container .menu__cards-container .menu__card .menu__card-detail .pp {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .menu .menu-container .menu__main-container .menu__cards-container .menu__card .menu__card-detail p:first-child {
   font-weight: 300;
   font-size: 15px;
@@ -442,6 +555,21 @@ a:active {
   font-weight: 700;
   font-size: 15px;
   padding-left: 10px;
+}
+.menu .menu-container .menu__main-container .menu__cards-container .menu__card .menu__card-border {
+  width: 0;
+  height: 100%;
+  background-color: #99E2D0;
+  transition: all 0.3s ease-in-out, height 0.3s ease-in-out;
+  position: relative;
+}
+.menu .menu-container .menu__main-container .menu__cards-container .menu__card .menu__card-border i {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+}
+.menu .menu-container .menu__main-container .menu__cards-container .menu__card:hover .menu__card-border {
+  width: 59px;
 }
 .menu .menu-container .btn-container {
   display: flex;
@@ -469,22 +597,22 @@ a:active {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
   transition: opacity 0.5s ease, box-shadow 0.5s ease;
 }
-
-.menu__card-border {
-  width: 0px;
-  height: 100%;
-  background-color: #99E2D0;
-  transition: all 0.3s ease-in-out, height 0.3s ease-in-out;
-  position: relative;
+.menu .menu_entrees {
+  animation: fade-in 2s ease forwards;
 }
-.menu__card-border i {
-  position: absolute;
-  top: 50%;
-  left: 15px;
+.menu .menu_plats {
+  animation: fade-in 4s ease forwards;
 }
-
-.active {
-  width: 59px;
+.menu .menu_desserts {
+  animation: fade-in 6s ease forwards;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /********** Responsive ***********/
@@ -496,6 +624,9 @@ a:active {
     justify-content: center;
     align-items: center;
   }
+  .menu .menu__title {
+    justify-content: center;
+  }
   .menu .menu-container {
     width: 1055px;
     padding: 0 200px 0 200px;
@@ -506,10 +637,6 @@ a:active {
   /******** banner-menu ******/
   .banner-menu .banner__barre-container .banner__barre {
     width: 1055px;
-  }
-  /********* footer **********/
-  .footer {
-    height: 114px;
   }
 }
 
