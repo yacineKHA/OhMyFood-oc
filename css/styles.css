@@ -542,31 +542,35 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-.menu .menu-container .menu__main-container .menu__cards-container .menu__card .menu__card-detail .pp {
+  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 .menu .menu-container .menu__main-container .menu__cards-container .menu__card .menu__card-detail p:first-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-weight: 300;
   font-size: 15px;
+  margin-right: 10px;
+  flex: 1;
 }
 .menu .menu-container .menu__main-container .menu__cards-container .menu__card .menu__card-detail p:last-child {
   font-weight: 700;
   font-size: 15px;
   padding-left: 10px;
+  transition: margin-left 0.3s ease-in-out;
 }
 .menu .menu-container .menu__main-container .menu__cards-container .menu__card .menu__card-border {
   width: 0;
   height: 100%;
   background-color: #99E2D0;
-  transition: all 0.3s ease-in-out, height 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
   position: relative;
 }
 .menu .menu-container .menu__main-container .menu__cards-container .menu__card .menu__card-border i {
   position: absolute;
   top: 50%;
   left: 15px;
+  transform: translateY(-50%);
 }
 .menu .menu-container .menu__main-container .menu__cards-container .menu__card:hover .menu__card-border {
   width: 59px;

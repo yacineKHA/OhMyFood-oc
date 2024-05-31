@@ -37,21 +37,17 @@ h2 {
         align-items: center;
 
         .banner__barre {
-
             height: 55px;
             width: 100%;
             background-color: #F6F6F6;
             border-radius: 40px 40px 0px 0px;
         }
     }
-
 }
-
 
 /*********** menu **************/
 
 .menu {
-
     background-color: white;
 
     .menu-container {
@@ -139,37 +135,38 @@ h2 {
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
-
-                        .pp {
-                            overflow: hidden; 
-                            text-overflow: ellipsis;
-                        }
+                        white-space: nowrap;
+                        overflow: hidden;
 
                         p:first-child {
+                            overflow: hidden; 
+                            text-overflow: ellipsis;
                             font-weight: 300;
                             font-size: 15px;
+                            margin-right: 10px;
+                            flex: 1; 
                         }
 
                         p:last-child {
                             font-weight: 700;
                             font-size: 15px;
                             padding-left: 10px;
+                            transition: margin-left 0.3s ease-in-out;
                         }
-
-                        .menu__card-price {}
                     }
 
                     .menu__card-border {
                         width: 0;
                         height: 100%;
                         background-color: $color-newgreen;
-                        transition: all 0.3s ease-in-out, height 0.3s ease-in-out;
+                        transition: width 0.3s ease-in-out;
                         position: relative;
 
                         i {
                             position: absolute;
                             top: 50%;
                             left: 15px;
+                            transform: translateY(-50%);
                         }
                     }
 
@@ -220,9 +217,6 @@ h2 {
     }
 }
 
-
-
-
 /********** Responsive ***********/
 
 // Desktop
@@ -256,8 +250,8 @@ h2 {
 
             .banner__barre {
                 width: 1055px;
-
             }
         }
     }
 }
+

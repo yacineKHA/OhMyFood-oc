@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -26,13 +27,14 @@
         </div>
         <div class="menu">
             <div class="menu-container">
-
-
                 <div class="menu__title">
                     <h2>La note enchantée</h2>
-                    <i class="fa-regular fa-xl fa-heart"></i>
+                    <div class="like-container like-menu">
+                        <i class="far fa-heart i1"></i>
+                        <i class="fas fa-heart i2"></i>
+                    </div>
                 </div>
-                <div class="menu__main-container">
+                <div class="menu__main-container menu_entrees">
                     <p class="menu__categorie-name">ENTREES</p>
                     <div class="menu__cards-container">
                         <div class="menu__card">
@@ -40,9 +42,7 @@
                                 <h3 class="menu__card-name">Ravioles de foie gras</h3>
                                 <div class="menu__card-detail">
                                     <p>Accompagnées de leur crème à la truffe</p>
-                                    <div class="menu__card-price">
-                                        25€
-                                    </div>
+                                    <p>25€</p>
                                 </div>
                             </div>
                             <div class="menu__card-border">
@@ -52,12 +52,10 @@
 
                         <div class="menu__card">
                             <div class="menu__card-info">
-                                <h3 class="menu__card-name">Caviar osciètre</h3>
+                                <h3 class="menu__card-name">Caviar osciètre </h3>
                                 <div class="menu__card-detail">
                                     <p>Sur blini à la farine de blé noir</p>
-                                    <div class="menu__card-price">
-                                        35€
-                                    </div>
+                                    <p>35€</p>
                                 </div>
                             </div>
                             <div class="menu__card-border">
@@ -70,9 +68,7 @@
                                 <h3 class="menu__card-name">Homard et espuma de potiron</h3>
                                 <div class="menu__card-detail">
                                     <p>Marinés aux zestes d'orange</p>
-                                    <div class="menu__card-price">
-                                        20€
-                                    </div>
+                                    <p>20€</p>
                                 </div>
                             </div>
                             <div class="menu__card-border">
@@ -84,9 +80,7 @@
                                 <h3 class="menu__card-name">Foie gras de canard cuit entier</h3>
                                 <div class="menu__card-detail">
                                     <p>Confiture de figue et pain toasté</p>
-                                    <div class="menu__card-price">
-                                        35€
-                                    </div>
+                                    <p>35€</p>
                                 </div>
                             </div>
                             <div class="menu__card-border">
@@ -96,7 +90,7 @@
                     </div>
                 </div>
 
-                <div class="menu__main-container">
+                <div class="menu__main-container menu_plats" >
                     <p class="menu__categorie-name">PLATS</p>
                     <div class="menu__cards-container">
                         <div class="menu__card">
@@ -104,9 +98,7 @@
                                 <h3 class="menu__card-name">Noix de coquilles Saint-Jacques</h3>
                                 <div class="menu__card-detail">
                                     <p>Sur lit de purée de céleri-rave</p>
-                                    <div class="menu__card-price">
-                                        40€
-                                    </div>
+                                    <p>40€</p>
                                 </div>
                             </div>
                             <div class="menu__card-border">
@@ -119,9 +111,7 @@
                                 <h3 class="menu__card-name">Langoustine poêlée</h3>
                                 <div class="menu__card-detail">
                                     <p>Purée de patate douce</p>
-                                    <div class="menu__card-price">
-                                        35€
-                                    </div>
+                                    <p>35€</p>
                                 </div>
                             </div>
                             <div class="menu__card-border">
@@ -134,9 +124,7 @@
                                 <h3 class="menu__card-name">Mijoté de queue de bœuf </h3>
                                 <div class="menu__card-detail">
                                     <p>Et riz sauvage aux zestes de citron</p>
-                                    <div class="menu__card-price">
-                                        45€
-                                    </div>
+                                    <p>45€</p>
                                 </div>
                             </div>
                             <div class="menu__card-border">
@@ -146,31 +134,25 @@
                     </div>
                 </div>
 
-                <div class="menu__main-container">
+                <div class="menu__main-container menu_desserts">
                     <p class="menu__categorie-name">DESSERTS</p>
                     <div class="menu__cards-container">
                         <div class="menu__card">
                             <div class="menu__card-info">
                                 <h3 class="menu__card-name">Macaron noisette et chocolat</h3>
                                 <div class="menu__card-detail">
-                                    <div class="pp">
-                                        Glace au caramel brun et sel de Guérande et bla
-                                    </div>
-                                   
-                                    <div class="menu__card-price">
-                                        18€
-                                    </div>
-                                
+                                    <p>Glace au caramel brun et sel de Guérande</p>
+                                    <p>18€</p>
                                 </div>
-                                <div class="menu__card-border">
-                                    <i class="fa-solid fa-circle-check fa-lg" style="color: #ffffff;"></i>
-                                </div>
+                            </div>
+                            <div class="menu__card-border">
+                                <i class="fa-solid fa-circle-check fa-lg" style="color: #ffffff;"></i>
                             </div>
                         </div>
 
                         <div class="menu__card">
                             <div class="menu__card-info">
-                                <h3 class="menu__card-name">Baba au rhum revisité</h3>
+                                <h3 class="menu__card-name">Baba au rhum revisité </h3>
                                 <div class="menu__card-detail">
                                     <p>Avec son coulis de citron</p>
                                     <p>22€</p>
@@ -183,7 +165,7 @@
 
                         <div class="menu__card">
                             <div class="menu__card-info">
-                                <h3 class="menu__card-name">Tarte au citron meringuée</h3>
+                                <h3 class="menu__card-name">Tarte au citron meringuée </h3>
                                 <div class="menu__card-detail">
                                     <p>Déstructurée</p>
                                     <p>23€</p>
@@ -215,11 +197,8 @@
                 <span>Devenir partenaire</span>
             </li>
             <li>Mentions légales</li>
-            <li>Contact</li>
+            <li><a href="mailto:ohmyfood@mail.com?subject=contact">Contact</a></li>
         </ul>
     </footer>
-    <script src="../script.js"></script>
-
 </body>
-
 </html>
