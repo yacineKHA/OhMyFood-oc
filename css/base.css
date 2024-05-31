@@ -1,0 +1,39 @@
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F6F6F6;
+  font-family: "Roboto", "Courier New", Courier, monospace;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+a:active {
+  text-decoration: none;
+  color: black;
+}
+
+/*# sourceMappingURL=base.css.map */

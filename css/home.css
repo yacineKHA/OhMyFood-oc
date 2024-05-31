@@ -1,0 +1,287 @@
+/********************* Loader ***********************/
+.loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  animation: hideLoader 2s linear 1;
+  animation-fill-mode: forwards;
+  position: fixed;
+  z-index: 99999;
+}
+.loader .loader__logo {
+  height: 40px;
+}
+.loader p {
+  color: white;
+  font-size: 20px;
+}
+.loader .loader__dots-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.loader .loader__dots-container .dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  animation: dots-anim infinite 0.3s alternate;
+}
+.loader .loader__dots-container .d2 {
+  animation-delay: 0.05s;
+}
+.loader .loader__dots-container .d3 {
+  animation-delay: 0.1s;
+}
+@keyframes dots-anim {
+  100% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes hideLoader {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+/****************** Localisation ***********************/
+.localisation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  height: 50px;
+  width: 100%;
+  background-color: #EAEAEA;
+  box-shadow: 0px 6px 3px -2px #BBBBBB;
+}
+
+/*********************** Banner ************************/
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 287px;
+  background-color: transparent;
+  gap: 30px;
+}
+.banner .banner__h2 {
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+.banner .banner__p {
+  text-align: center;
+  font-weight: 300;
+  font-size: 18px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.banner .banner__button {
+  text-align: center;
+  border-radius: 50px;
+  padding: 20px;
+  color: white;
+  background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  border: 0px;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.5s ease, box-shadow 0.5s ease;
+}
+.banner .banner__button:hover {
+  opacity: 0.75;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
+  transition: opacity 0.5s ease, box-shadow 0.5s ease;
+}
+
+/********************* fonctionnement ********************/
+.fonctionnement {
+  background-color: white;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  height: 440px;
+  padding: 25px;
+}
+.fonctionnement .fonctionnement__main-container {
+  width: 100%;
+}
+.fonctionnement .fonctionnement__main-container .fonctionnement__cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  margin-top: 30px;
+}
+.fonctionnement .fonctionnement__main-container .fonctionnement__cards-container .fonctionnement__card {
+  position: relative;
+  background-color: #F6F6F6;
+  width: 100%;
+  height: 72.38px;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 32px;
+  align-items: center;
+  gap: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 13px 13px -2px rgb(234, 234, 234);
+  box-shadow: 0px 13px 13px -2px rgb(234, 234, 234);
+}
+.fonctionnement .fonctionnement__main-container .fonctionnement__cards-container .fonctionnement__card .fonctionnement__cards-badge {
+  position: absolute;
+  left: -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #9356DC;
+  width: 24px;
+  height: 24px;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/********************** Restaurants ***********************/
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  margin-bottom: 50px;
+}
+.restaurants .restaurants__main-container {
+  width: 100%;
+}
+.restaurants .restaurants__main-container .restaurants__cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
+}
+.restaurants .restaurants__main-container .restaurants__cards-container .restaurants__card {
+  position: relative;
+  background-color: white;
+  height: 251px;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 15px;
+  z-index: 1;
+}
+.restaurants .restaurants__main-container .restaurants__cards-container .restaurants__card .restaurants__card-new-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: #99E2D0;
+  color: #008766;
+  width: 80px;
+  height: 29px;
+  right: 15px;
+  top: 15px;
+  font-weight: 500;
+  font-size: 14px;
+}
+.restaurants .restaurants__main-container .restaurants__cards-container .restaurants__card .restaurants__img-container {
+  height: 180px;
+  overflow: hidden;
+  width: 100%;
+}
+.restaurants .restaurants__main-container .restaurants__cards-container .restaurants__card .restaurants__img-container .restaurants__img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+.restaurants .restaurants__main-container .restaurants__cards-container .restaurants__card .restaurants__cards-bottom {
+  padding: 15px;
+}
+.restaurants h2 {
+  font-weight: 700;
+  font-size: 24px;
+  width: 100%;
+  margin-top: 20px;
+}
+.restaurants h3 {
+  font-size: 18px;
+}
+.restaurants p {
+  font-weight: 300;
+  font-size: 17px;
+}
+
+.like-home {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999;
+}
+.like-home i {
+  bottom: 0;
+  right: 5px;
+}
+
+/********************* Responsive ***********************/
+@media screen and (min-width: 1075px) {
+  /********* fonctionnement ************/
+  .fonctionnement {
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 228px;
+    padding: 0 180px 0 180px;
+  }
+  .fonctionnement .fonctionnement__main-container {
+    justify-content: center;
+    align-items: center;
+    max-width: 1080px;
+  }
+  .fonctionnement .fonctionnement__main-container .fonctionnement__cards-container {
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  /********** Restaurants ***********/
+  .restaurants {
+    padding: 0 180px 0 180px;
+  }
+  .restaurants .restaurants__main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1080px;
+  }
+  .restaurants .restaurants__main-container .restaurants__cards-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+  }
+  .restaurants .restaurants__main-container .restaurants__cards-container .restaurants__card {
+    width: 45%;
+  }
+}
+
+/*# sourceMappingURL=home.css.map */
