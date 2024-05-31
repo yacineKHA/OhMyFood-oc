@@ -524,19 +524,37 @@ h2 {
   width: 100%;
   overflow: hidden;
   box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
+  cursor: pointer;
+}
+.menu .menu-container .menu__main-container .menu__cards-container .menu__card .menu__padding {
+  padding: 12px;
 }
 .menu .menu-container .menu__main-container .menu__cards-container .menu__card .menu__card-info {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  justify-content: space-between;
   width: 100%;
   height: 100%;
-  padding: 10px;
-  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
 }
-.menu .menu-container .menu__main-container .menu__cards-container .menu__card .menu__card-name {
+.menu .menu-container .menu__main-container .menu__cards-container .menu__card .menu__card-info .menu__card-name {
   font-size: 18px;
   font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu .menu-container .menu__main-container .menu__cards-container .menu__card .menu__card-info .menu__card-description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 300;
+  font-size: 15px;
+}
+.menu .menu-container .menu__main-container .menu__cards-container .menu__card .menu__card-price {
+  display: flex;
+  align-items: flex-end;
+  font-weight: 700;
+  font-size: 15px;
 }
 .menu .menu-container .menu__main-container .menu__cards-container .menu__card .menu__card-detail {
   display: flex;
@@ -544,20 +562,6 @@ h2 {
   justify-content: space-between;
   white-space: nowrap;
   overflow: hidden;
-}
-.menu .menu-container .menu__main-container .menu__cards-container .menu__card .menu__card-detail p:first-child {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-weight: 300;
-  font-size: 15px;
-  margin-right: 10px;
-  flex: 1;
-}
-.menu .menu-container .menu__main-container .menu__cards-container .menu__card .menu__card-detail p:last-child {
-  font-weight: 700;
-  font-size: 15px;
-  padding-left: 10px;
-  transition: margin-left 0.3s ease-in-out;
 }
 .menu .menu-container .menu__main-container .menu__cards-container .menu__card .menu__card-border {
   width: 0;
