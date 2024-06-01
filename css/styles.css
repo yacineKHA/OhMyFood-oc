@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 html {
   box-sizing: border-box;
@@ -36,6 +37,18 @@ a:active {
   color: black;
 }
 
+.white-icon {
+  color: white;
+}
+
+.grey-icon {
+  color: #7E7E7E;
+}
+
+.violet-icon {
+  color: #9356DC;
+}
+
 .header {
   display: flex;
   justify-content: center;
@@ -50,10 +63,6 @@ a:active {
 
 /*************** bouton like ***************/
 .like-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
   cursor: pointer;
 }
 .like-container i {
@@ -67,18 +76,16 @@ a:active {
 .like-container .i2 {
   opacity: 0;
   background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: opacity 0.3s ease-in-out;
 }
 
 .like-container:hover .i1 {
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
 }
 .like-container:hover .i2 {
   opacity: 1;
-  transition: opacity 0.3s ease-in-out;
 }
 
 /*********************** footer ***********************/
@@ -146,23 +153,27 @@ a:active {
   background-color: black;
   width: 100%;
   height: 100%;
-  animation: hideLoader 2s linear 1;
-  animation-fill-mode: forwards;
   position: fixed;
   z-index: 99999;
+  animation: hideLoader 3s linear 1;
+  animation-fill-mode: forwards;
+  /**** disparition du loader*****/
+  /**** animation des points*****/
+  /************/
 }
-.loader .loader__logo {
-  height: 40px;
-}
-.loader p {
-  color: white;
-  font-size: 20px;
+@keyframes hideLoader {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 .loader .loader__dots-container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 15px;
+  /** rebond des points**/
+  /**délai d'animation**/
 }
 .loader .loader__dots-container .dot {
   width: 30px;
@@ -171,24 +182,25 @@ a:active {
   background-color: white;
   animation: dots-anim infinite 0.3s alternate;
 }
+@keyframes dots-anim {
+  100% {
+    transform: translateY(-15px);
+  }
+}
 .loader .loader__dots-container .d2 {
   animation-delay: 0.05s;
 }
 .loader .loader__dots-container .d3 {
   animation-delay: 0.1s;
 }
-@keyframes dots-anim {
-  100% {
-    transform: translateY(-15px);
-  }
+.loader .loader__logo {
+  height: 40px;
+}
+.loader p {
+  color: white;
+  font-size: 20px;
 }
 
-@keyframes hideLoader {
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
 /****************** Localisation ***********************/
 .localisation {
   position: relative;
@@ -323,7 +335,6 @@ a:active {
   overflow: hidden;
   width: 100%;
   border-radius: 15px;
-  z-index: 1;
 }
 .restaurants .restaurants__main-container .restaurants__cards-container .restaurants__card .restaurants__card-new-badge {
   display: flex;
@@ -574,7 +585,6 @@ h2 {
   position: absolute;
   top: 50%;
   left: 15px;
-  transform: translateY(-50%);
 }
 .menu .menu-container .menu__main-container .menu__cards-container .menu__card:hover .menu__card-border {
   width: 59px;

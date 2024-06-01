@@ -17,16 +17,11 @@
 
 /*************** bouton like ***************/
 .like-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
     cursor: pointer;
 
     i {
         font-size: 24px;
         position: absolute;
-
     }
 
     .i1 {
@@ -37,7 +32,7 @@
     .i2 {
         opacity: 0;
         background-image: linear-gradient(to bottom, $color-primary, $color-secondary);
-        -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         transition: opacity 0.3s ease-in-out;
     }
@@ -46,12 +41,10 @@
 .like-container:hover {
     .i1 {
         opacity: 0;
-        transition: opacity 0.3s ease-in-out;
     }
 
     .i2 {
         opacity: 1;
-        transition: opacity 0.3s ease-in-out;
     }
 }
 

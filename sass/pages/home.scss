@@ -12,20 +12,20 @@
     background-color: black;
     width: 100%;
     height: 100%;
-    animation: hideLoader 2s linear 1;
-    animation-fill-mode: forwards;
     position: fixed;
     z-index: 99999;
+    animation: hideLoader 3s linear 1;
+    animation-fill-mode: forwards; // garde animation cachée à la fin
 
-    .loader__logo {
-        height: 40px;
+    /**** disparition du loader*****/
+    @keyframes hideLoader {
+        100% {
+            opacity: 0;
+            visibility: hidden;
+        }
     }
 
-    p {
-        color: white;
-        font-size: 20px;
-    }
-
+    /**** animation des points*****/
     .loader__dots-container {
         display: flex;
         justify-content: center;
@@ -40,6 +40,14 @@
             animation: dots-anim infinite 0.3s alternate;
         }
 
+        /** rebond des points**/
+        @keyframes dots-anim {
+            100% {
+                transform: translateY(-15px);
+            }
+        }
+
+        /**délai d'animation**/
         .d2 {
             animation-delay: 0.05s;
         }
@@ -47,22 +55,20 @@
         .d3 {
             animation-delay: 0.1s;
         }
+    }
 
-        @keyframes dots-anim {
-            100% {
-                transform: translateY(-15px);
-            }
-        }
+    /************/
+    .loader__logo {
+        height: 40px;
+    }
+
+    p {
+        color: white;
+        font-size: 20px;
     }
 
 }
 
-@keyframes hideLoader {
-    100% {
-        opacity: 0;
-        visibility: hidden;
-    }
-}
 
 
 /****************** Localisation ***********************/
@@ -198,7 +204,7 @@
                 overflow: hidden;
                 width: 100%;
                 border-radius: 15px;
-                z-index: 1;
+
 
                 .restaurants__card-new-badge {
                     display: flex;
