@@ -37,18 +37,6 @@ a:active {
   color: black;
 }
 
-.white-icon {
-  color: white;
-}
-
-.grey-icon {
-  color: #7E7E7E;
-}
-
-.violet-icon {
-  color: #9356DC;
-}
-
 .header {
   display: flex;
   justify-content: center;
@@ -112,6 +100,19 @@ a:active {
 }
 .footer .footer__listlinks a {
   color: white;
+}
+
+/********* Icon colors *****************/
+.white-icon {
+  color: white;
+}
+
+.grey-icon {
+  color: #7E7E7E;
+}
+
+.violet-icon {
+  color: #9356DC;
 }
 
 /********************* Responsive desktop ***********************/
